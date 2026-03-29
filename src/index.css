@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-Mogra: "Mogra", system-ui;
+    --font-Shizuru: "Shizuru", system-ui;
+    --font-Nothing: "Nothing You Could Do", system-ui;
+    --font-Playpen: "Playpen Sans Arabic", system-ui
+}

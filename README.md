@@ -6,7 +6,6 @@ maintain your dignity and meet your needs with the highest quality. Our values �
 Trust and safety: Every number or place we have is available so you can rest assured while you are going. Our message to every girl and woman: “You have the right to relax, and you have the right to receive the service that suits your principles without compromise.
 
 ### Fonts & Icons
-This project uses: 
 - Mogra font — SIL Open Font License (OFL) Google Fonts 
 - Font Awesome Free icons — Free for personal and commercial use (CC BY 4.0) Font Awesome
 

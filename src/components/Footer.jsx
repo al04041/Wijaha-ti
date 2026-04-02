@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div
       id="Tell"
-      className=" text-2xl w-[90%] mx-auto font-Playpen bg-gray-500/20 p-8 my-0 rounded-2xl "
+      className=" text-2xl w-[95%] md:w-[90%] mx-auto font-Playpen bg-gray-500/20 p-8 my-0 rounded-2xl "
     >
       <div className="text-center p-1 m-1 text-black/70">
         <h1 className="mb-4 text-2xl font-bold">اتصل بنا</h1>

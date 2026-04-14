@@ -12,15 +12,43 @@ const CategorySection = () => {
   const [places, setPlaces] = useState([]); 
   const [loading, setLoading] = useState(false);
 
+
+  const getUserLocation = () => {
+    return new Promise((resolve, reject) => {
+      if (!navigator.geolocation) {
+        reject(new Error("المتصفح لا يدعم تحديد الموقع"));
+      }
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+  };
+
   const getPlacesFromDB = async (categoryId) => {
     setLoading(true);
-    const { data, error } = await supabase
-      .from('place')
-      .select('*')
-      .eq('category_id', categoryId);
+    try {
+      // --- بداية الجزء المضاف ---
+      // طلب الموقع أولاً
+      const position = await getUserLocation();
+      const userLat = position.coords.latitude;
+      const userLng = position.coords.longitude;
+      
+      console.log(" جلب البيانات من Supabase...");
+      
 
-    if (!error) setPlaces(data);
-    setLoading(false);
+      const { data, error } = await supabase.rpc('get_closest_places_by_category', {
+        category_id: parseInt(categoryId),
+        user_lat: userLat,
+        user_lng: userLng
+      });
+
+      console.log(" نتيجة Supabase:", { data, error });
+
+
+      if (!error) setPlaces(data);
+    } catch (err) {
+      console.error("Error:", err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
 

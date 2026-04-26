@@ -8,5 +8,11 @@
     --font-Mogra: "Mogra", system-ui;
     --font-Shizuru: "Shizuru", system-ui;
     --font-Nothing: "Nothing You Could Do", system-ui;
-    --font-Playpen: "Playpen Sans Arabic", system-ui
+    --font-Playpen: "Playpen Sans Arabic", system-ui;
+    --color-premium:var(--color-primary);
+     --color-second:var(--color-secondary);
+
+    
+    --color-primary: #fecaca;  
+    --color-secondary: #f3f4f6;  
 }
